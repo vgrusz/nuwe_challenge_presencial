@@ -4,6 +4,8 @@ const testTarget = require("./Test_target.json");
 
 const app = express();
 
+const PORT = process.env.PORT ? process.env.PORT : 3001;
+
 app.use(express.json());
 
 app.post("/process", (req, res) => {
@@ -30,6 +32,6 @@ app.post("/process", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log("app escuchando puerto 3001");
+app.listen(PORT, () => {
+  console.log("app escuchando puerto ", PORT);
 });
