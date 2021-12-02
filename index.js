@@ -23,7 +23,11 @@ app.post("/process", (req, res) => {
 
   console.log("sumatoria deltas al cuadrado * 1/n", squareDeltaSummation * (1 / n));
 
-  res.send({ Response: ecm });
+  res.send({
+    ecm: ecm,
+    prediccion: inputFromFrontend,
+    objetivo: testTarget,
+  });
 });
 
 app.listen(3001, () => {
