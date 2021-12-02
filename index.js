@@ -34,7 +34,8 @@ app.post("/process", (req, res) => {
     let inputFromFrontend = req.body;
 
     //Verifies incoming data quantity
-    if (inputFromFrontend.length != 990) throw new Error("Length of input not equal to 990");
+    if (inputFromFrontend.length != 990)
+      throw new Error("Length of input not equal to 990 " + inputFromFrontend.length);
 
     for (i = 0; i < testTarget.length; i++) {
       //verifies incoming data type
